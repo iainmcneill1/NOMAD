@@ -1,0 +1,48 @@
+#SECTION:INGREDIENTS
+    Protein:
+        - 2x Chicken Breast
+
+    Fruits/Vegetables: 
+        - 1x White Onion 
+        - 3x Garlic Cloves
+        - 2-3x Small Tomatoes
+        - 1x Juice of Lemon
+        - 2-3 Dates (Halved)
+
+
+    Fats/Oils:
+        - 2x tbsp Olive Oil
+
+    Stock:
+        - 240ml Chicken Stock
+
+    Spice Mix:
+        - 1x tsp Cumin
+        - 1x tsp Ground Coriander
+        - 1x tsp Ground Ginger
+        - 1x tsp Ground Cinnamon
+        - 1/2x tsp Turmeric 
+        - 1x tsp Paprika
+
+    Misc: 
+        - 1x tbsp Honey
+        - 1x tbsp Tomato Paste
+#ENDSECTION
+
+#SECTION:INSTRUCTIONS
+
+1. Prep the chicken and spices
+Pat the chicken dry, season lightly with salt and pepper.
+In a tagine, Dutch oven, or slow cooker insert, heat olive oil over medium heat.
+Brown chicken on both sides until lightly golden (about 3–4 minutes per side). Remove and set aside.
+
+2. Build the flavor base
+In the same pot, add onions and cook until softened (5–7 minutes).
+Stir in garlic and all spices (cumin, coriander, ginger, cinnamon, turmeric, paprika). Cook 1 minute to bloom the spices.
+
+3. Deglaze and mix liquids
+Add tomato paste, honey, lemon juice, and chicken stock. Stir well, scraping any browned bits off the bottom.
+
+4. Combine and cook low and slow
+Combine all components in large dutch oven or tagine, cook low and slow. Recommended at oven 90°C for 4 hours, before increasing to 140°C for 2 hours.
+#ENDSECTION

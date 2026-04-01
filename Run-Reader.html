@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Run Table Vault</title>
+  <style>
+    .table-container-run {
+      max-height: 120px;      /* Shows roughly last 2 rows */
+      overflow-y: auto;       /* Scroll for older rows */
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .run-table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 500px;
+    }
+
+    .run-table th, .run-table td {
+      border: 1px solid #ccc;
+      padding: 8px 12px;
+      text-align: center;
+    }
+
+    .run-table th {
+      background-color: rgba(0, 49, 53, 0.8); /* Dark teal header */
+      color: white;
+      position: sticky;
+      top: 0; /* Keep header visible while scrolling */
+    }
+
+    /* Optional: subtle fade at top to hint at scrollable older rows */
+    .table-container-run::before {
+      content: '';
+      display: block;
+      height: 20px;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.1), transparent);
+      position: sticky;
+      top: 0;
+      pointer-events: none;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <!-- Table -->
+  <div class="boxc" style="grid-area: box-3">
+    <div class="table-container-run" id="tableContainer">
+      <table id="runTable" class="run-table">
+        <thead>
+          <tr>
+            <th class="col-date">Date</th>
+            <th>Distance (km)</th>
+            <th>Time</th>
+            <th>Pace (min/km)</th>
+            <th>Heart Rate (bpm)</th>
+            <th>Rating (/10)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows filled automatically from CSV -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- JS to load CSV -->
+  <script>
+    fetch('runs.csv') // Your CSV file in the same folder
+      .then(response => response.text())
+      .then(data => {
+        const tableBody = document.querySelector('#runTable tbody');
+        const tableContainer = document.getElementById('tableContainer');
+        const rows = data.split('\n').slice(1).filter(row => row.trim()); // skip header & empty rows
+
+        // Add all rows to table
+        rows.forEach(row => {
+          const cols = row.split(',');
+          const tr = document.createElement('tr');
+          cols.forEach(col => {
+            const td = document.createElement('td');
+            td.textContent = col;
+            tr.appendChild(td);
+          });
+          tableBody.appendChild(tr);
+        });
+
+        // Scroll to show last 2 rows
+        const rowHeight = tableBody.querySelector('tr')?.offsetHeight || 50; // fallback 50px
+        const visibleRows = 2;
+        tableContainer.scrollTop = tableBody.scrollHeight - (rowHeight * visibleRows);
+      })
+      .catch(err => console.error('Error loading CSV:', err));
+  </script>
+</body>
+</html>

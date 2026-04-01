@@ -1,0 +1,172 @@
+.section-container-travel {
+    justify-content: center;
+    align-content: top;
+    margin: 0 auto;
+    height: 800px;
+    display: grid;
+    grid-template-columns: minmax(auto, 400px) minmax(auto, 300px) minmax(auto, 300px) minmax(auto, 300px);
+    grid-template-rows: 50px minmax(auto, 100px) minmax(auto, 360px) minmax(auto, 120px);
+    gap: 20px;
+    grid-template-areas:
+    "box-1 box-1 box-1 box-1"
+    "box-2 box-4 box-4 box-4"
+    "box-3 box-4 box-4 box-4"
+    "box-5 box-4 box-4 box-4";
+    max-width: 1400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.728);
+    border-radius: 30px;
+    background: rgba(0, 49, 53, 0.6); /* 0.5 = 50% opacity */;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(10px);  /* Safari support */
+
+    /* Optional styling for nicer look */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.section-title-travel { 
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 0px;
+    background: rgba(255, 255, 255, 0.9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-title-container-travel {
+    text-align: center;
+    min-width: 150px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    background: rgba(0, 49, 53, 0.9); /* Semi-transparent dark teal */
+}
+
+.boxb{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;  /* Blue for adjustment #0071ff*/
+}
+
+.boxba{
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    background-color: transparent;  /* Blue for adjustment #0071ff*/
+}
+
+
+
+/* Menu css */
+
+
+/* Dropdown styling */
+.travel-dropdown-container select {
+  width: 100%;
+  height: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgba(0, 43, 47, 0.9); /* darker background */
+  color: white;
+  outline: none;
+  font-size: 16px;
+
+  overflow-y: auto;
+}
+
+/* Webkit browsers: Chrome, Safari, Edge */
+.travel-dropdown-container select::-webkit-scrollbar {
+  width: 8px;               /* thinner scrollbar */
+}
+
+.travel-dropdown-container select::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2); /* subtle dark background */
+  border-radius: 4px;
+}
+
+.travel-dropdown-container select::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2); /* minimalist thumb */
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* subtle edge */
+}
+
+.travel-dropdown-container select::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* slightly brighter on hover */
+}
+
+/* Firefox scrollbar */
+.travel-dropdown-container select {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) rgba(0, 0, 0, 0.2);
+}
+
+/* Notes styling */
+.travel-notes-container {
+  background-color: rgba(0, 43, 47, 0.9);
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Carousel container */
+.travel-carousel-container {
+  position: relative;   /* IMPORTANT */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 49, 53, 0.9);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+#carouselPhoto {
+  max-width: 92%;
+  max-height: 92%;
+  object-fit: contain;
+  z-index: 1;
+  border: 2px solid transparent; /* prevents layout shift */
+}
+
+#carouselPhoto:hover {
+  transform: scale(1.005);
+  border: 2px solid rgba(0, 100, 105, 0.7); /* soft white border */
+}
+
+.carousel-btn {
+  position: absolute;   /* key change */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background-color: rgba(0, 100, 105, 0.7);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+/* Left button */
+#prevPhoto {
+  left: 10px;
+}
+
+/* Right button */
+#nextPhoto {
+  right: 10px;
+}
+
+.carousel-btn:hover {
+  background-color: #00a3a6;
+}

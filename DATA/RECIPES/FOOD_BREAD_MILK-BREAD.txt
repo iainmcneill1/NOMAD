@@ -1,0 +1,46 @@
+#SECTION:INGREDIENTS
+    Tangzhong:
+        -2x tbsp Flour, 20g
+        -2x tbsp Water, 27g
+        -4½x tbsp Milk, 60g
+
+    Yeast Mixture:
+        -1x tbsp active Instant Yeast, 10g
+        -2x tbsp Lukewarm Water, 20g
+        -10g Sugar
+
+    Dough:
+        -Tangzhong
+        -Yeast Mixture
+        -AP Flour, 380g
+        -Sugar, 50g
+        -Salt, 3g
+        -Milk, 130g
+        -1 Large Egg
+        -3 tbsp Butter
+#ENDSECTION
+
+#SECTION:INSTRUCTIONS
+
+1.Prepping Tangzhong
+In a saucepan, add the tangzhong ingredients and cook, continuing to stir over low heat until a paste forms. Should be thick and you will be able to pick all of it up with a spoon.
+
+2.Prepping Yeast Mixture
+Add the active dry yeast into the lukewarm water, mix and allow to sit for 10 minutes.
+
+3.Forming Dough
+Combine your yeast mixture and tangzhong along with the remaining dough ingredients in a large bowl. Bring together and form dough before kneeding for 10-15 minutes.
+
+4.First Proof
+Cover dough and allow to proof for 2hrs.
+
+5.Forming Loaf
+Divide the dough into three equal pieces. Roll out each before folding and place in a loaf tin lined with baking parchment.
+
+6.Second Proof
+Cover and allow to sit in the loaf for 45 minutes.
+
+7.Bake
+Bake uncovered in a oven preheated to 165°C for 30-33 minutes.
+
+#ENDSECTION

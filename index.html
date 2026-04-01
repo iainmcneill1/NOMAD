@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection of My Interests</title>
+    <link rel="stylesheet" href="css/NOMAD_CLEAN_BASE.css">
+    <link rel="stylesheet" href="css/NOMAD_HEADER.css">
+    <link rel="stylesheet" href="css/NOMAD_HOME.css">
+    <link rel="stylesheet" href="css/NOMAD_CLOCK.css">
+    <link rel="stylesheet" href="css/NOMAD_MUSIC.css">
+    <link rel="stylesheet" href="css/NOMAD_RUNNING.css">
+    <link rel="stylesheet" href="css/NOMAD_TRAVEL.css">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="runningGraph.js"></script>
+    
+    <script src="js/Recipe_SCRIPT.js"></script>
+    <script src="js/NOMAD_RUNNING.js"></script>
+    <script src="js/NOMAD_UPDATES.js"></script>
+    <script src="js/NOMAD_TRAVEL.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/xyz123.css">
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="#home" class="logo-container">
+                <span class="logo-text"><u>OTTERvAULT:</u></span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#Travel_Archive" class="nav-link">Travel Archive</a></li>
+                <li><a href="#Running" class="nav-link">Fitness</a></li>
+                <li><a href="#Sketches" class="nav-link">Sketches</a></li>
+                <li><a href="#Music" class="nav-link">Music</a></li>
+                
+            </ul>
+            <ul class="hover-zone"></ul>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="section-home">
+        <div class="section-container-home">
+            <div class="boxa" style="grid-area: box-1">
+              <div class="overlay-box">
+                <p>THE <br>DIGITAL <br> VAULT <br> PROJECT: <br><br> BY IAIN C MCNEILL <br> :)</p>
+              </div>
+            </div>
+    </section>
+
+
+<!-- Travel Archive Section -->
+<section id="Travel_Archive" class="section">
+  <div class="animationbox4">
+    <div class="section-container-travel">
+      
+      <!-- Title -->
+      <div class="boxb" style="grid-area: box-1">
+        <div class="section-title-container-travel">
+          <h2 class="section-title-travel">Travel Archive:</h2>
+        </div>
+      </div>
+
+      <!-- Dropdown for Location + Date -->
+      <div class="boxba" style="grid-area: box-2">
+        <div class="travel-dropdown-container">
+          <select id="travelSelect" size=5>
+            <!-- Options populated dynamically -->
+          </select>
+        </div>
+      </div>
+
+      <!-- Notes Section -->
+      <div class="boxb" style="grid-area: box-3">
+        <div class="travel-notes-container">
+          <h3>Trip Notes:</h3>
+          <p id="travelNotes">Select a location and date above to see nfsfsafotes.</p>
+        </div>
+      </div>
+
+      <!-- Notes Section -->
+      <div class="boxb" style="grid-area: box-5">
+        <div class="travel-notes-container">
+          <h3>Photo Notes:</h3>
+          <p id="travelPhotoNotes">Select a location and date above to see the photo notes.</p>
+        </div>
+      </div>
+
+      <!-- Photo Carousel Section --> 
+       <div class="boxb" style="grid-area: box-4"> 
+        <div class="travel-carousel-container"> 
+          <button id="prevPhoto" class="carousel-btn">&lt;</button> 
+          <img id="carouselPhoto" src="" alt="Travel Photo"> 
+          <button id="nextPhoto" class="carousel-btn">&gt;</button> 
+        </div> 
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+</section>
+<!-- Fitness Section -->
+<section id="Running" class="section">
+  <div class="animationbox3">
+    <div class="section-container-Running">
+
+      <!-- Title -->
+      <div class="boxwe" style="grid-area: box-1">
+        <div class="section-title-container-run">
+          <h2 class="section-title-run">Fitness:</h2>
+        </div>
+      </div>
+
+      <!-- Running Goals Section -->
+      <div class="boxc" style="grid-area: box-2">
+        <div class="section-goals-container-run" id="goalsContainer">
+          <h2 class="section-goals-run">Fitness Goals:</h2>
+          
+          <!-- Goals list -->
+          <ul id="goalsList" class="goals-list">
+            <!-- Populated by JS -->
+          </ul>
+
+          <!-- Input to add a new goal -->
+          <div class="goal-input-container">
+            <input type="text" id="goalInput" placeholder="Add a new goal..." />
+            <button id="addGoalBtn">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div class="boxc" style="grid-area: box-3">
+        <div class="table-container-run" id="tableContainer">
+          <table id="runTable" class="run-table">
+            <thead>
+              <tr>
+                <th class="col-date">Date</th>
+                <th>Distance (km)</th>
+                <th>Time</th>
+                <th>Pace (min/km)</th>
+                <th>Heart Rate (bpm)</th>
+                <th>Rating (/10)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Filled automatically from CSV -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Graph -->
+      <div class="boxc" style="grid-area: box-4">
+        <div class="graph-container-run">
+          <canvas id="runDistanceChart"></canvas>
+        </div>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="runningGraph.js"></script>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- Music Section -->
+<section id="Music" class="section">
+  <div class="animationbox2">
+    <div class="section-container-Music">
+
+      <!-- Title -->
+      <div class="boxb" style="grid-area: box-1">
+        <div class="section-header-music">
+          <h2 class="section-title-music">Music:</h2>
+        </div>
+      </div>
+
+      <!-- Goals -->
+      <div class="boxb" style="grid-area: box-2"> 
+        <div id="updatesContainer" class="updates" contenteditable="true">
+          <h3>Updates for <span id="updatesDate"></span></h3>
+          <p>Click here to edit this text...</p>
+        </div>
+<button id="saveUpdatesBtn">Save Changes</button>
+
+
+      </div>
+
+      <!-- Graphs -->
+      <div class="boxb" style="grid-area: box-3">
+        <div id="lastUpdated">Last updated: <span id="lastUpdatedTime">Never</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- Footer Section -->
+    <section id="home2" class="section">
+        <div class="section-container-home">
+            <div class="overlay-box">
+                <p>THE <br>DIGITAL <br> VAULT <br> PROJECT: <br><br> BY IAIN C MCNEILL <br> :)</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="js/NOMAD_CLEAN_PRIME.js"></script>
+    <script src="js/NOMAD_CLOCK.js"></script>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to(".animationbox", {
+    scrollTrigger: {
+      trigger: ".animationbox",
+      start: "top center",   // when the top of the box reaches the center of the viewport
+      end: "bottom top",     // when the bottom of the box reaches the top of the viewport
+      scrub: true,           // link animation to scroll position
+    },
+    opacity: 0,              // fade out
+    x: 0,                  // optional: move up as it fades
+    ease: "none"
+  });
+</script>
+
+
+
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(".animationbox2",
+  { opacity: 0.1, y: 0, x: -200}, // starting state
+  { 
+    opacity: 1,
+    y: 0,
+    x: 0,
+    ease: "none",         // linear fade
+    scrollTrigger: {
+      trigger: ".animationbox2",
+      start: "top 80%",   // when animation begins
+      end: "top 25%",  // when animation ends
+      scrub: true          // links animation to scroll
+    }
+  }
+);
+
+gsap.fromTo(".animationbox2",
+  { opacity: 1, y: 0, x: 0}, // starting state
+  { 
+    opacity: 0.1,
+    y: 0,
+    x: -200,
+    ease: "none",         // linear fade
+    scrollTrigger: {
+      trigger: ".animationbox2",
+      start: "bottom 50%",   // when animation begins
+      end: "bottom 0%",  // when animation ends
+      scrub: true          // links animation to scroll
+    }
+  }
+);
+
+</script>
+
+
+
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(".animationbox3",
+  { opacity: 0.1, y: 0, x: -200}, // starting state
+  { 
+    opacity: 1,
+    y: 0,
+    x: 0,
+    ease: "none",         // linear fade
+    scrollTrigger: {
+      trigger: ".animationbox3",
+      start: "top 80%",   // when animation begins
+      end: "top 25%",  // when animation ends
+      scrub: true          // links animation to scroll
+    }
+  }
+);
+
+gsap.fromTo(".animationbox3",
+  { opacity: 1, y: 0, x: 0}, // starting state
+  { 
+    opacity: 0.1,
+    y: 0,
+    x: -200,
+    ease: "none",         // linear fade
+    scrollTrigger: {
+      trigger: ".animationbox3",
+      start: "bottom 50%",   // when animation begins
+      end: "bottom 0%",  // when animation ends
+      scrub: true          // links animation to scroll
+    }
+  }
+);
+
+</script>
+
+
+
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(".animationbox4",
+  { opacity: 0.1, y: 0, x: -200}, // starting state
+  { 
+    opacity: 1,
+    y: 0,
+    x: 0,
+    ease: "none",         // linear fade
+    scrollTrigger: {
+      trigger: ".animationbox4",
+      start: "top 80%",   // when animation begins
+      end: "top 25%",  // when animation ends
+      scrub: true          // links animation to scroll
+    }
+  }
+);
+
+gsap.fromTo(".animationbox4",
+  { opacity: 1, y: 0, x: 0}, // starting state
+  { 
+    opacity: 0.1,
+    y: 0,
+    x: -200,
+    ease: "none",         // linear fade
+    scrollTrigger: {
+      trigger: ".animationbox4",
+      start: "bottom 50%",   // when animation begins
+      end: "bottom 0%",  // when animation ends
+      scrub: true          // links animation to scroll
+    }
+  }
+);
+
+</script>
+
+
+</body>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // ...your fetch code here
+});
+</script>
+</html>

@@ -1,0 +1,45 @@
+.section-home {
+    align-items: center;
+    position: relative;
+    width: 100%;
+    top: 0;
+    height: 500px;
+    background: transparent;
+}
+
+.section-container-home {
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+    min-height: 500px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 500px;
+    grid-template-rows: 500px;
+    gap: 20px;
+    grid-template-areas:
+    "box-1 box-2";
+    max-width: 1400px;
+    background: transparent;
+}
+
+
+.boxa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent
+}
+
+.overlay-box {
+    position: absolute; /* Sit on top of the image */
+    left: -400px;          /* Adjust horizontal position */
+    top: 10px;
+    background: transparent; /* Semi-transparent background */
+    padding: 0px;
+    border-radius: 15px;
+    font-weight: 800;
+    color: white;
+    line-height: 0.91;
+    font-size: 45px;
+}

@@ -1,0 +1,36 @@
+#SECTION:INGREDIENTS
+    Protein:
+        - 1x Chicken Breast or 3x Chicken Thighs
+
+    Fats/Oils:
+        - 1.5x tbsp Olive Oil
+
+    Spice Mix:
+        - 1/4x tsp Cumin
+        - 1/4x tsp Ground Coriander
+        - 1x tsp Ground Ginger
+        - 1/2x tsp Ground Cinnamon
+        - 1x tsp Paprika
+        - 1/2x tsp Salt
+        - 2-3x ground Cardamom Pods
+
+    Misc: 
+        - Pinch of Sugar
+        - Juice of half a Lemon
+        - 1x tsp Greek Yogurt
+        - 1x clove of Garlic
+
+#ENDSECTION
+
+#SECTION:INSTRUCTIONS
+
+1. Prep the chicken and spices
+Cut the chicken into small pieces and mix together with together all Spices and Misc in a bowl.
+
+2. Marinade
+Allow to marinade minimum 2 hours (Recommended 24hrs).
+
+3. Cooking
+Either fry in a pan with a little olive oil, or grill in the oven at 180 for 23 mins.
+
+#ENDSECTION
