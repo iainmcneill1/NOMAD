@@ -12,6 +12,7 @@
     "box-1 box-1 box-1 box-1"
     "box-2 box-2 box-4 box-4"
     "box-3 box-3 box-4 box-4";
+    width: 90%;
     max-width: 1400px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.728);
     border-radius: 30px;
