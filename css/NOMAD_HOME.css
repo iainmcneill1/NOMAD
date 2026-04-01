@@ -43,3 +43,12 @@
     line-height: 0.91;
     font-size: 45px;
 }
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .overlay-box {
+        font-size: 35px;
+        left: 15px;            /* keep near left edge */
+        top: 10px;
+    }
+}
